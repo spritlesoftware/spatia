@@ -193,13 +193,9 @@ Establishing technical credibility means being specific about the failure modes.
 
 
 
-
-
 |  |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **2. Depth quality is the accuracy ceiling**Translation is initialised from median depth and the score is heavily depth-driven. NVIDIA lists reflective and transparent objects as a known limitation, and this matches field experience: polished metal, clear plastic and dark matte surfaces all defeat active stereo and structured light in different ways. Machined aluminium parts under bright shop lighting are a genuinely hard case. Mitigations exist — better sensors, learned stereo such as FoundationStereo, matting the parts, controlling the lighting — but the failure is at the sensor, not the model, so no amount of model swapping fixes it. |
-
-
 
 
 
@@ -209,13 +205,9 @@ Establishing technical credibility means being specific about the failure modes.
 
 
 
-
-
 |  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **4. Calibration debt does not go away**Pose is expressed in the camera frame. Everything the robot does happens in the base frame. The transform between them is hand-eye calibration, and its error adds directly to your placement error. Zero-shot pose estimation removes the data-collection burden of moving a camera; it does not remove the calibration burden. Budget for it every time a camera moves. |
-
-
 
 
 
